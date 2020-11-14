@@ -1,8 +1,9 @@
 import {Movie} from './movie'
 
 export const Movies : Movie[] = [
-    {id:1,name:"movie1"},
-    {id:2,name:"movie2"},
-    {id:3,name:"movie3"}
+    {id:11,name:"The Green Mile"},
+    {id:22,name:"The Shawhank Redemption"},
+    {id:33,name:"Sunshine of the Spotless Mind"},
+    {id:44,name:"Interstellar"}
 ]
     
