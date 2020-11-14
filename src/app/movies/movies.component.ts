@@ -14,6 +14,5 @@ export class MoviesComponent{
  onSelect(movie:Movie):void{
    this.selectedMovie = movie;
  }
-
 }
 
