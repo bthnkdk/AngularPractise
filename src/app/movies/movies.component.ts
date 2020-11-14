@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import {Movies} from "../movie.datasource"
 
 @Component({
     selector:'movies',
     templateUrl:'movies.component.html',
-    styles:[
-        'h2 { color :blue;}'
-    ]
 })
 export class MoviesComponent{
+ title = "Movies List";
+ movies = Movies;
 
 }
+
