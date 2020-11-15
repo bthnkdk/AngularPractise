@@ -27,8 +27,17 @@ export class MovieService {
 
   update(movie: Movie): Observable<any> {
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    }
-    return this.http.put(this.apiMoviesUrl, movie,httpOptions);
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+    return this.http.put(this.apiMoviesUrl, movie, httpOptions);
+  }
+
+  add(movie: Movie): Observable<Movie> {
+    return this.http.post<Movie>(this.apiMoviesUrl, movie);
+  }
+
+  delete(movie: Movie): Observable<Movie> {
+    this.loggingService.add('MovieService: ' + movie.name + ' is deleted');
+    return this.http.delete<Movie>(this.apiMoviesUrl + '/' + movie.id);
   }
 }
