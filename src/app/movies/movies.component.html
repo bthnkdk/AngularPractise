@@ -1,11 +1,9 @@
-<movie-detail [movie]="selectedMovie"></movie-detail>
 <div class="card">
     <div class="card-header">
         {{ title }}
     </div>
     <ul class="list-group flush">
-        <li *ngFor="let movie of movies; index as i" (click)="onSelect(movie)" class="list-group-item"
-            [class.active]="movie === selectedMovie">
+        <li *ngFor="let movie of movies; index as i" routerLink='/detail/{{movie.id}}' class="list-group-item">
             <span class="badge badge-success">{{ i + 1 }}</span>{{ movie.name }}
             <span class="close">x</span>
         </li>
